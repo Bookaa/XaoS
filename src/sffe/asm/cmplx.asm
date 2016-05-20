@@ -127,7 +127,7 @@ _sffecinv:
 	fstp    qword [edx] 
 	wait
 	leave
-	ret		
+	ret     4
 
 %ifdef DELPHI
 [section cexp_text use32]
@@ -147,7 +147,7 @@ _sffecexp:
 	fstp    qword [eax+08h]
 	wait	
 	leave
-	ret
+	ret     4
 
 %ifdef DELPHI
 [section cln_text use32]
@@ -177,7 +177,7 @@ _sffecln:
 	fstp    qword [eax+08h]
 	wait
 	leave
-	ret
+	ret     4
 	
 %ifdef DELPHI
 [section clog2_text use32]
@@ -205,7 +205,7 @@ _sffeclog2:
 	fstp    qword [eax]      
 	wait
 	leave
-	ret
+	ret     4
 
 %ifdef DELPHI
 [section clog_text use32]
@@ -244,7 +244,7 @@ _sffeclog:
 	fstp    st0
 	wait	
 	leave
-	ret
+	ret     4
 
 %ifdef DELPHI
 [section csin_text use32]
@@ -278,7 +278,7 @@ _sffecsin:
 	fstp    st0
 	fwait
 	leave
-	ret
+	ret     4
 
 %ifdef DELPHI
 [section ccos_text use32]
@@ -313,7 +313,7 @@ _sffeccos:
 	fstp    st0
 	fwait	
 	leave
-	ret
+	ret     4
 	
 %ifdef DELPHI
 [section ctan_text use32]
@@ -351,7 +351,7 @@ _sffectan:
 	fstp    qword [eax+08h]
 	fwait	
 	leave
-	ret
+	ret     4
 	
 %ifdef DELPHI
 [section ccot_text use32]
@@ -392,7 +392,7 @@ _sffeccot:
 	fstp   st0
 	fwait
 	leave
-	ret
+	ret     4
 	
 %ifdef DELPHI
 [section csinh_text use32]
@@ -425,7 +425,7 @@ _sffecsinh:
 	fstp    qword [eax]
 	fwait	
 	leave
-	ret
+	ret     4
 
 %ifdef DELPHI
 [section ccosh_text use32]
@@ -463,7 +463,7 @@ _sffeccosh:
 	fstp    qword [eax]
 	fwait
 	leave
-	ret
+	ret     4
 	
 %ifdef DELPHI
 [section ctanh_text use32]
@@ -502,7 +502,7 @@ _sffectanh:
 	fstp    qword [eax]
 	fwait	
 	leave
-	ret
+	ret     4
 
 %ifdef DELPHI
 [section ccoth_text use32]
@@ -542,7 +542,7 @@ _sffeccoth:
 	fstp   	qword [eax]
 	fwait
 	leave
-	ret
+	ret     4
 
 ;***************** COMPLEX TO COMPLEX POWER			
 %ifdef DELPHI
@@ -604,7 +604,7 @@ MZ:
 END:
 s	fwait
 	leave
-	ret
+	ret     4
 
 ;***************** COMPLEX TO REAL POWER
 %ifdef DELPHI
@@ -656,7 +656,7 @@ MZ2:
 END2:
 	fwait
 	leave
-	ret
+	ret     4
 
 ;***************** COMPLEX TO INT POWER		
 %ifdef DELPHI
@@ -716,7 +716,7 @@ MZ5:
 END53:
 	fwait
 	leave	
-	ret
+	ret     4
 
 ;***************** INT/DOUBLE TO COMPLEX POWER	
 %ifdef DELPHI
@@ -775,7 +775,7 @@ MZ3:
 END3:
 	fwait 
 	leave
-	ret
+	ret     4
 	
 ;***************** SQRT
 %ifdef DELPHI
@@ -825,7 +825,7 @@ IMAGPOS:
 	fstp 	qword [ebx+08h]		
 	pop		ebx
 	leave
-	ret
+	ret     4
 
 ;***************** Nth ORDER ROOT	
 %ifdef DELPHI
@@ -889,7 +889,7 @@ MZ4:
 	fstp    qword [eax+08h]   
 END4:
 	leave
-	ret
+	ret     4
 
 %ifndef DELPHI	
 _sffecfunc:	
